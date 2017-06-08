@@ -1,0 +1,39 @@
+@charset "UTF-8";
+@import "custom";
+
+$primary-color: #333;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+header{
+	h1{
+		color: red;
+		span{
+			color: yellow;
+			background-color: $primary-color;
+		}
+	}
+}
+.main{
+	h2{
+		color: blue;
+		span{
+			color: $primary-color;
+		}
+	}
+}
+footer{
+	h3{
+		color: green;
+	}
+	span{
+		border: 1px solid $primary-color;
+		@include border-radius(10px);
+	}
+}
